@@ -1,0 +1,81 @@
+body {
+  font-family: Helvetica;
+}
+
+#sus {
+  margin-bottom: -75px;
+  font-family: Cambria;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Remove rounded corners from the container */
+  padding: 20px;
+  padding-inline: 115px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 75px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 75px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.container label {
+  margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container button[type="submit"] {
+  margin-bottom: 15px;
+  border-radius: 0; /* Remove rounded corners from the form fields and button */
+}
+
+.container button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #00abe4;
+  color: white;
+  border: white;
+}
+
+.container button[type="submit"]:hover {
+  background-color: #bcdcff;
+  transition-delay: 0s;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+#s_up {
+  color: #00abe4;
+  text-decoration: none;
+}
+
+#s_in {
+  color: black;
+  text-decoration: none;
+}
+
+#for_pass {
+  color: rgba(0, 0, 0, 0.705);
+  text-decoration: none;
+}
+
+#for_pass:hover {
+  color: #00abe4;
+}
+
+#for_pass:active {
+  color: rgba(0, 0, 0, 0.705);
+}
+
+#pri_term {
+  color: rgba(0, 0, 0, 0.747);
+  font-size: small;
+}
