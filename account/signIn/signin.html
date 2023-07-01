@@ -54,5 +54,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+      document
+        .getElementById("signin-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let email = document.getElementById("email").value;
+          let password = document.getElementById("password").value;
+
+          // Retrieve stored user account information from local storage
+          let storedEmail = localStorage.getItem("userEmail");
+          let storedPassword = localStorage.getItem("userPassword");
+
+          if (email === storedEmail && password === storedPassword) {
+            // Valid credentials
+            alert("You are now signed in.");
+
+            // Redirect to the shopping cart page
+            window.location.href =
+              "../../shoppingBag/shoppingBagLogged/shoppingCartLogged.html";
+          } else {
+            // Invalid credentials
+            let passwordInput = document.getElementById("password");
+            passwordInput.classList.add("is-invalid");
+
+            let errorFeedback = document.querySelector(".invalid-feedback");
+            if (!errorFeedback) {
+              errorFeedback = document.createElement("div");
+              errorFeedback.className = "invalid-feedback";
+              errorFeedback.innerHTML =
+                "Invalid email or password. Please try again.";
+
+              let formGroup = passwordInput.closest(".mb-3");
+              formGroup.appendChild(errorFeedback);
+            }
+          }
+        });
+    </script>
   </body>
 </html>
