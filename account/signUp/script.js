@@ -3,7 +3,6 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Retrieve form values
     let email = document.getElementById("email").value;
     let firstName = document.getElementById("first-name").value;
     let lastName = document.getElementById("last-name").value;
@@ -18,7 +17,6 @@ document
       }
     }
 
-    // Validate form fields
     let passwordInput = document.getElementById("password");
     let confirmPasswordInput = document.getElementById("confirm-password");
     let errorFeedback = document.getElementById("password-error-feedback");
@@ -44,7 +42,7 @@ document
       confirmPasswordInput.classList.remove("is-invalid");
     }
 
-    // Account creation success
+    // account creation success
     alert(
       "Account created successfully! Welcome, " +
         firstName +

@@ -63,19 +63,18 @@
           let email = document.getElementById("email").value;
           let password = document.getElementById("password").value;
 
-          // Retrieve stored user account information from local storage
+          // retrieve stored user account information from local storage
           let storedEmail = localStorage.getItem("userEmail");
           let storedPassword = localStorage.getItem("userPassword");
 
           if (email === storedEmail && password === storedPassword) {
-            // Valid credentials
+            // v alid credentials
             alert("You are now signed in.");
 
-            // Redirect to the shopping cart page
-            window.location.href =
-              "../../shoppingBag/shoppingBagLogged/shoppingCartLogged.html";
+            // redirect to the shopping cart page
+            window.location.href = "../../homePageLogged/index.html";
           } else {
-            // Invalid credentials
+            // invalid credentials
             let passwordInput = document.getElementById("password");
             passwordInput.classList.add("is-invalid");
 

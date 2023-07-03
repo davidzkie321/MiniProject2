@@ -4,14 +4,14 @@ document
     event.preventDefault();
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    // For demonstration purposes, assume that the password is "password123"
+    // demonstration only, assume that the password is "password123"
     if (password === "password123") {
-      // Valid password
+      // valid password
       alert("You are now signed in.");
       let passwordInput = document.getElementById("password");
       passwordInput.classList.remove("is-invalid");
     } else {
-      // Invalid password
+      // invalid pass word
       let passwordInput = document.getElementById("password");
       passwordInput.classList.add("is-invalid");
 

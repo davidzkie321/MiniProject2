@@ -175,17 +175,13 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          // Retrieve form values
           let email = document.getElementById("email").value;
           let password = document.getElementById("password").value;
 
-          // Store user account information in local storage
           localStorage.setItem("userEmail", email);
           localStorage.setItem("userPassword", password);
 
-          // Account creation success
           alert("Account created successfully! Welcome, " + email + ".");
-          // Redirect to the sign-in page
           window.location.href = "../signIn/signin.html";
         });
     </script>
